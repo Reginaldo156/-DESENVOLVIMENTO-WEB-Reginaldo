@@ -1,0 +1,175 @@
+/* =========================================
+   4 e 5. VARIÁVEIS DE CORES E TIPOGRAFIA
+   ========================================= */
+:root {
+  /* Esquema de cores */
+  --cor-primaria: #1e3a8a;
+  --cor-secundaria: #3b82f6;
+  --cor-fundo: #f1f5f9;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1e293b;
+  --cor-texto-claro: #ffffff;
+  --cor-borda: #cbd5e1;
+
+  /* Tipografia */
+  --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --fonte-titulo: Georgia, 'Times New Roman', serif;
+  --tamanho-base: 16px;
+  --tamanho-titulo: 1.75rem;
+}
+
+/* =========================================
+   RESET E ESTILOS GERAIS
+   ========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-base);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* =========================================
+   2 e 3. ESPAÇAMENTOS, MARGENS E BORDAS
+   ========================================= */
+.cabecalho {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  padding: 1rem 1.5rem;
+  border-bottom: 3px solid var(--cor-secundaria);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.conteudo-principal {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.cartao {
+  background-color: var(--cor-superficie);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+}
+
+.cartao h1 {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-titulo);
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.cartao p {
+  margin-bottom: 1.5rem;
+}
+
+.botao-acao {
+  display: inline-block;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--cor-primaria);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.rodape {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--cor-superficie);
+  border-top: 1px solid var(--cor-borda);
+}
+
+/* =========================================
+   EXTRAS 3 e 4: CONTROLE DO MENU APENAS COM CSS
+   ========================================= */
+
+/* Esconde o input checkbox original */
+.menu-checkbox {
+  display: none;
+}
+
+/* Estilo base dos botões com ícones */
+.btn-menu {
+  cursor: pointer;
+  padding: 0.4rem;
+  border: 1px solid var(--cor-texto-claro);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Extra 3: Estado inicial (menu e botão fechar escondidos; botão abrir visível) */
+.menu-navegacao {
+  display: none;
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--cor-secundaria);
+}
+
+.btn-fechar {
+  display: none;
+}
+
+.btn-abrir {
+  display: flex;
+}
+
+/* Lista de links do menu */
+.menu-navegacao ul {
+  list-style: none;
+}
+
+.menu-navegacao li {
+  margin-bottom: 0.5rem;
+}
+
+.menu-navegacao a {
+  display: block;
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.menu-navegacao a:hover {
+  background-color: var(--cor-secundaria);
+  border-color: var(--cor-texto-claro);
+}
+
+/* Extra 4: Quando o checkbox é marcado (clique no botão abrir) */
+.menu-checkbox:checked ~ .menu-navegacao {
+  display: block;
+}
+
+.menu-checkbox:checked ~ .btn-abrir {
+  display: none;
+}
+
+.menu-checkbox:checked ~ .btn-fechar {
+  display: flex;
+}
