@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFCE CAMPOS LIMOEIRO DO NORTE - Projeto Web</title>
+  <!-- 1. Importação do arquivo CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="logo">FRANCISCO REGINALDO VIDAL SOUSA</div>
+
+    <!-- Checkbox oculto que controla o estado do menu via CSS -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+    <!-- Extra 1 e 2: Botão para ABRIR o menu com ícone SVG -->
+    <label for="menu-toggle" class="btn-menu btn-abrir" aria-label="Abrir menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </label>
+
+    <!-- Extra 1 e 2: Botão para FECHAR o menu com ícone SVG -->
+    <label for="menu-toggle" class="btn-menu btn-fechar" aria-label="Fechar menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </label>
+
+    <!-- Menu de navegação -->
+    <nav class="menu-navegacao">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="conteudo-principal">
+    <section class="cartao">
+      <h1>Bem-vindo AO IFCE CAMPOS LIMOEIRO DO NORTE </h1>
+      <p>Este é um exemplo de página estilizada com variáveis CSS, margens, espaçamentos internos, bordas e menu interativo sem JavaScript.</p>
+      <a href="#" class="botao-acao">Saiba Mais</a>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
